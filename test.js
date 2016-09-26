@@ -20,6 +20,17 @@ test(function( t ){
 
 	t.equal(ip({
 		headers: {
+			'cf-connecting-ip': '127.0.0.2',
+			'x-forwarded-for': dummy,
+		},
+		connection: {
+			socket: {},
+		},
+		socket: {},
+	}), dummy);
+
+	t.equal(ip({
+		headers: {
 			'x-forwarded-for': dummy,
 		},
 		connection: {
