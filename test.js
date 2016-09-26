@@ -29,6 +29,16 @@ test(function( t ){
 	}), dummy);
 
 	t.equal(ip({
+		headers: {
+			'x-forwarded-for': [ '127.0.0.2', dummy ].join(', '),
+		},
+		connection: {
+			socket: {},
+		},
+		socket: {},
+	}), '127.0.0.2');
+
+	t.equal(ip({
 		headers: {},
 		connection: {
 			socket: {},
