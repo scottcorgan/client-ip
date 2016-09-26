@@ -4,11 +4,14 @@
   "description": "Get the client IP address of the current request",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/scottcorgan/client-ip.git"
+  },
+  "devDependencies": {
+    "tape": "^4.6.0"
   },
   "keywords": [
     "client",
